@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Viewer</title>
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+  <div id="message-container"></div>
+
+  <script>
+    // Tomamos el contenido HTML enviado desde Thunkable y lo insertamos en el div
+    document.addEventListener('DOMContentLoaded', function () {
+      var message = decodeURIComponent(window.location.search.substring(1));
+      document.getElementById('message-container').innerHTML = message;
+    });
+  </script>
+</body>
+</html>
